@@ -23,7 +23,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/richard.bourdelais/Desktop/GameEngine/GameEngine/out/build/x64-Debug"
+			"value" : "c:/Users/richard.bourdelais/source/repos/CMakeTest/out/build/x64-Debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -59,7 +59,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "19050301"
+			"value" : "19060802"
 		},
 		{
 			"name" : "CMAKE_COMMAND",
@@ -111,7 +111,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Tools/MSVC/14.21.27702/bin/HostX64/x64/cl.exe"
+			"value" : "C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Tools/MSVC/14.22.27905/bin/HostX64/x64/cl.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS",
@@ -223,7 +223,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Tools/MSVC/14.21.27702/bin/HostX64/x64/cl.exe"
+			"value" : "C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Tools/MSVC/14.22.27905/bin/HostX64/x64/cl.exe"
 		},
 		{
 			"name" : "CMAKE_C_FLAGS",
@@ -499,7 +499,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/richard.bourdelais/Desktop/GameEngine/GameEngine"
+			"value" : "C:/Users/richard.bourdelais/source/repos/CMakeTest"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -511,7 +511,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Users/richard.bourdelais/Desktop/GameEngine/GameEngine/out/install/x64-Debug"
+			"value" : "C:/Users/richard.bourdelais/source/repos/CMakeTest/out/install/x64-Debug"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -527,7 +527,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Tools/MSVC/14.21.27702/bin/Hostx64/x64/link.exe"
+			"value" : "C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Tools/MSVC/14.22.27905/bin/Hostx64/x64/link.exe"
 		},
 		{
 			"name" : "CMAKE_MAKE_PROGRAM",
@@ -539,7 +539,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe"
+			"value" : "C:/PROGRA~2/MICROS~1/2019/ENTERP~1/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -635,7 +635,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files (x86)/Windows Kits/10/bin/10.0.17763.0/x64/mt.exe"
+			"value" : "C:/Program Files (x86)/Windows Kits/10/bin/10.0.18362.0/x64/mt.exe"
 		},
 		{
 			"name" : "CMAKE_NUMBER_OF_MAKEFILES",
@@ -695,7 +695,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "GameEngine"
+			"value" : "CMakeTest"
 		},
 		{
 			"name" : "CMAKE_RC_COMPILER",
@@ -711,7 +711,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files (x86)/Windows Kits/10/bin/10.0.17763.0/x64/rc.exe"
+			"value" : "C:/Program Files (x86)/Windows Kits/10/bin/10.0.18362.0/x64/rc.exe"
 		},
 		{
 			"name" : "CMAKE_RC_COMPILER_WORKS",
@@ -1010,22 +1010,6 @@
 			"value" : ""
 		},
 		{
-			"name" : "CMAKE_TOOLCHAIN_FILE",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "The CMake toolchain file"
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "C:/Users/richard.bourdelais/Desktop/vcpkg/scripts/buildsystems/vcpkg.cmake"
-		},
-		{
 			"name" : "CMAKE_VERBOSE_MAKEFILE",
 			"properties" : 
 			[
@@ -1042,7 +1026,7 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "GameEngine_BINARY_DIR",
+			"name" : "CMakeTest_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1051,10 +1035,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/richard.bourdelais/Desktop/GameEngine/GameEngine/out/build/x64-Debug"
+			"value" : "C:/Users/richard.bourdelais/source/repos/CMakeTest/out/build/x64-Debug"
 		},
 		{
-			"name" : "GameEngine_SOURCE_DIR",
+			"name" : "CMakeTest_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1063,55 +1047,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/richard.bourdelais/Desktop/GameEngine/GameEngine"
-		},
-		{
-			"name" : "VCPKG_APPLOCAL_DEPS",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Automatically copy dependencies into the output directory for executables."
-				}
-			],
-			"type" : "BOOL",
-			"value" : "ON"
-		},
-		{
-			"name" : "VCPKG_TARGET_TRIPLET",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Vcpkg target triplet (ex. x86-windows)"
-				}
-			],
-			"type" : "STRING",
-			"value" : "x64-windows"
-		},
-		{
-			"name" : "_VCPKG_CL",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Path to a program."
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Tools/MSVC/14.21.27702/bin/Hostx64/x64/cl.exe"
-		},
-		{
-			"name" : "_VCPKG_ROOT_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Vcpkg root directory"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "C:/Users/richard.bourdelais/Desktop/vcpkg"
+			"value" : "C:/Users/richard.bourdelais/source/repos/CMakeTest"
 		}
 	],
 	"kind" : "cache",

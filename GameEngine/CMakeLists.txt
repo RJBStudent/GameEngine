@@ -3,7 +3,7 @@
 #
 cmake_minimum_required (VERSION 3.8)
 
-project ("GameEngine")
+project ("CMakeTest")
 
 # Include sub-projects.
-add_subdirectory ("GameEngine")
+add_subdirectory ("CMakeTest")

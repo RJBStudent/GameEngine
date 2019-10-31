@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/richard.bourdelais/Desktop/GameEngine/GameEngine/GameEngine
+# Install script for directory: C:/Users/richard.bourdelais/source/repos/CMakeTest/CMakeTest
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/richard.bourdelais/Desktop/GameEngine/GameEngine/out/install/x64-Debug")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/richard.bourdelais/source/repos/CMakeTest/out/install/x64-Debug")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

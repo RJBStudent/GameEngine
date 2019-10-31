@@ -18,14 +18,14 @@
 					"source" : "."
 				},
 				{
-					"build" : "GameEngine",
+					"build" : "CMakeTest",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.8"
 					},
 					"parentIndex" : 0,
 					"projectIndex" : 0,
-					"source" : "GameEngine",
+					"source" : "CMakeTest",
 					"targetIndexes" : 
 					[
 						0
@@ -41,7 +41,7 @@
 						0,
 						1
 					],
-					"name" : "GameEngine",
+					"name" : "CMakeTest",
 					"targetIndexes" : 
 					[
 						0
@@ -52,9 +52,9 @@
 			[
 				{
 					"directoryIndex" : 1,
-					"id" : "GameEngine::@3f1430db303f85cff844",
-					"jsonFile" : "target-GameEngine-Debug-ca8bc40c928d107b5e0f.json",
-					"name" : "GameEngine",
+					"id" : "CMakeTest::@d4ef8182086997085d2c",
+					"jsonFile" : "target-CMakeTest-Debug-c15242490cc3aee391e7.json",
+					"name" : "CMakeTest",
 					"projectIndex" : 0
 				}
 			]
@@ -63,8 +63,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/richard.bourdelais/Desktop/GameEngine/GameEngine/out/build/x64-Debug",
-		"source" : "C:/Users/richard.bourdelais/Desktop/GameEngine/GameEngine"
+		"build" : "C:/Users/richard.bourdelais/source/repos/CMakeTest/out/build/x64-Debug",
+		"source" : "C:/Users/richard.bourdelais/source/repos/CMakeTest"
 	},
 	"version" : 
 	{

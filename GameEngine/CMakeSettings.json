@@ -1,4 +1,5 @@
 ﻿{
+  // See https://go.microsoft.com//fwlink//?linkid=834763 for more information about this file.
   "configurations": [
     {
       "name": "x64-Debug",
@@ -9,31 +10,7 @@
       "installRoot": "${projectDir}\\out\\install\\${name}",
       "cmakeCommandArgs": "",
       "buildCommandArgs": "-v",
-      "ctestCommandArgs": "",
-      "cmakeToolchain": "C:\\Users\\richard.bourdelais\\Desktop\\vcpkg\\scripts\\buildsystems\\vcpkg.cmake",
-      "variables": []
-    },
-    {
-      "name": "Linux-Debug",
-      "generator": "Unix Makefiles",
-      "configurationType": "Debug",
-      "cmakeExecutable": "/usr/bin/cmake",
-      "remoteCopySourcesExclusionList": [ ".vs", ".git", "out" ],
-      "cmakeCommandArgs": "",
-      "buildCommandArgs": "",
-      "ctestCommandArgs": "",
-      "cmakeToolchain": "C:/Users/richard.bourdelais/Desktop/vcpkg/scripts/buildsystems/vcpkg.cmake",
-      "inheritEnvironments": [ "linux_x64" ],
-      "remoteMachineName": "${defaultRemoteMachineName}",
-      "remoteCMakeListsRoot": "$HOME/.vs/${projectDirName}/${workspaceHash}/src",
-      "remoteBuildRoot": "$HOME/.vs/${projectDirName}/${workspaceHash}/out/build/${name}",
-      "remoteInstallRoot": "$HOME/.vs/${projectDirName}/${workspaceHash}/out/install/${name}",
-      "remoteCopySources": true,
-      "rsyncCommandArgs": "-t --delete --delete-excluded",
-      "remoteCopyBuildOutput": false,
-      "remoteCopySourcesMethod": "rsync",
-      "addressSanitizerRuntimeFlags": "detect_leaks=0",
-      "variables": []
+      "ctestCommandArgs": ""
     }
   ]
 }
