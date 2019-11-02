@@ -13,9 +13,14 @@ public:
 
 	virtual void Update();
 
+	template <typename T>
+	T* GetPart();
+
+	template<typename T>
+	void AddPart();
 
 private:
-
+	int mID;
 };
 
-#endif // !OBJECT_H
+#endif OBJECT_H
