@@ -2,11 +2,13 @@
 //
 
 #include "VenisEngineSource.h"
-
+#include "VenisEngineExecutable/Engine.h"
 
 int main()
 {
 	std::cout << "Hello CMake." << std::endl;
+	VenisEngine thisEngine;
+	thisEngine.VenisEngineMain();
 
 	return 0;
 }

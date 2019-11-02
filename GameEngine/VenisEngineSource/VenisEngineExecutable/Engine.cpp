@@ -1,11 +1,14 @@
+//#include <iostream>
+#include "Engine.h"
+#include "MemoryManagement/VenisMemoryBuffer.h"
 
-#pragma once
-
-#include <iostream>
-
-
-int EngineMain()
+int VenisEngine::VenisEngineMain()
 {
-	std::cout << "RunningEngine" << std::endl;
+	//std::cout << "RunningEngine" << std::endl;
+	Temporary* t = new Temporary();
+
+	VenisBuffer temporaryBuffer;
+	temporaryBuffer.NewBuffer(t, 100);
+
 	return 0;
 }

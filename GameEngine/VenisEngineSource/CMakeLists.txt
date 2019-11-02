@@ -3,7 +3,8 @@
 #
 cmake_minimum_required (VERSION 3.8)
 
-# Add source to this project's executable.
-add_executable (VenisEngineSource WIN32 "VenisEngineSource.cpp" "VenisEngineSource.h")
+file(GLOB_RECURSE source_files ("VenisEngineSource.cpp" "VenisEngineSource.h" "VenisEngineExecutable/*.cpp" "VenisEngineExecutable/*.h"))
 
+# Add source to this project's executable.
+add_executable (VenisEngineSource ${source_files})
 # TODO: Add tests and install targets if needed.
