@@ -4,11 +4,11 @@
 
 int VenisEngine::VenisEngineMain()
 {
-	//std::cout << "RunningEngine" << std::endl;
-	Temporary* t = new Temporary();
-
-	VenisBuffer temporaryBuffer;
-	temporaryBuffer.NewBuffer(t, 100);
-
+	std::cout << "RunningEngine" << std::endl;
+		
+	VenisBuffer::GetInstance()->NewBuffer(sizeof(Temporary));
+	Temporary temp;
+	//temp.justAValue
+	VenisBuffer::cleanInstance();
 	return 0;
 }
