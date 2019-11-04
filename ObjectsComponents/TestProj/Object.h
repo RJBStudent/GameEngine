@@ -13,11 +13,17 @@ public:
 
 	virtual void Update();
 
-	template <typename T>
-	T* GetPart();
+	template<typename T>
+	T* GetPart()
+	{
+		return PartManager::GetInstance().GetPart<T>(mID);
+	}
 
 	template<typename T>
-	void AddPart();
+	void AddPart()
+	{
+		PartManager::GetInstance().AddPart<T>(mID);
+	}
 
 private:
 	int mID;

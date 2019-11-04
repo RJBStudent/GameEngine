@@ -1,8 +1,11 @@
 #pragma once
 #ifndef PARTMANAGER_H
 #define PARTMANAGER_H
-#include "Part.h"
 #include <unordered_map>
+#include <utility>
+#include <type_traits>
+#include <typeindex>
+#include "TestPart.h"
 
 //Singleton
 class PartManager
@@ -17,10 +20,29 @@ public:
 	void CleanUp();
 
 	void Update();
+
 	template <typename T>
-	T* GetPart(int objectIndex);
+	T* GetPart(int objectIndex)
+	{
+		auto allParts = mOICMap.equal_range(objectIndex);
+		for (auto it = allParts.first; it != allParts.second; it++)
+		{
+			if (typeid(it->second) == typeid(T))
+			{
+				auto returner = it->second;                                                                                                                                                                                                                                                                              
+				return dynamic_cast<T*>(returner);
+			}
+		}
+
+		return nullptr;
+	}
+
 	template <typename T>
-	void AddPart(int objectIndex);
+	void AddPart(int objectIndex)
+	{
+		T part;
+		mOICMap.insert({ objectIndex, part });
+	}
 
 private:
 	PartManager() {}

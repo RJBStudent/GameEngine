@@ -22,15 +22,3 @@ void Object::Start()
 {
 	std::cout << "Base Object Start \n";
 }
-
-template<typename T>
-T* Object::GetPart()
-{
-	return PartManager::GetPart<T>(mID);
-}
-
-template<typename T>
-void Object::AddPart()
-{
-	PartManager::AddPart<T>(mID);
-}

@@ -13,6 +13,7 @@ void PartManager::init()
 
 void PartManager::CleanUp()
 {
+
 }
 
 void PartManager::Update()
@@ -23,25 +24,4 @@ void PartManager::Update()
 	{
 		it->second.Update();
 	}
-}
-
-template <typename T>
-T* PartManager::GetPart(int objectIndex)
-{
-	auto allParts = mOICMap.equal_range(objectIndex);
-	for (auto it = allParts.first; it != allParts.second; it++)
-	{
-		if (typeid(it->second) == typeid(T))
-		{
-			return &it->second;
-		}
-	}
-
-	return nullptr;
-}
-
-template <typename T>
-void PartManager::AddPart(int objectIndex)
-{
-	mOICMap.insert({ objectIndex, T() });
 }
