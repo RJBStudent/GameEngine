@@ -8,7 +8,7 @@ PartManager::~PartManager()
 
 void PartManager::init()
 {
-
+	partAmount = 1;
 }
 
 void PartManager::CleanUp()
@@ -24,4 +24,9 @@ void PartManager::Update()
 	{
 		it->second.Update();
 	}
+}
+
+int PartManager::GetPartAmount()
+{
+	return partAmount;
 }

@@ -20,6 +20,7 @@ public:
 	void CleanUp();
 
 	void Update();
+	static int GetPartAmount();
 
 	template <typename T>
 	T* GetPart(int objectIndex)
@@ -45,11 +46,12 @@ public:
 	}
 
 private:
-	PartManager() {}
+	PartManager() { partAmount = 0; }
 	~PartManager();
 
 	//Object Index to Component Map
 	std::unordered_multimap<int, Part> mOICMap;
+	static unsigned int partAmount;
 };
 
 #endif PARTMANAGER_H

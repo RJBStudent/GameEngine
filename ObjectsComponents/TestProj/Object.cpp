@@ -4,8 +4,8 @@
 
 Object::Object()
 {
-	mID = -1;
 	std::cout << "Base Object Contructor \n";
+	mOIC = new int[PartManager::GetPartAmount()];
 }
 
 Object::~Object()

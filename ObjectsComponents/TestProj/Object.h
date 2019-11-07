@@ -26,7 +26,7 @@ public:
 	}
 
 private:
-	int mID;
+	int* mOIC;
 };
 
 #endif OBJECT_H
