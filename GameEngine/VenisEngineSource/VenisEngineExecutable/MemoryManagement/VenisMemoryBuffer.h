@@ -6,54 +6,59 @@
 #include <assert.h>
 //Class Started by RJ Bourdelais
 
+
+class VenisBufferManager
+{
+public:
+private:
+
+	
+
+};
+
+template <typename T>
 class VenisBuffer
 {
 public:
 	
 
-	static VenisBuffer* GetInstance() { if (Instance == NULL) Instance = new VenisBuffer(); return Instance; }
-
-	static void cleanInstance() { delete Instance; }
-
-	template <typename T>
-	void NewBuffer(T size)
+	VenisBuffer() {}
+	~VenisBuffer() { std::cout << "destroying VenisBuffer" << std::endl; delete[] memoryBuffer; }
+	
+	void NewBuffer(T size, int count)
 	{
-		memoryBuffer = std::make_unique<unsigned char[]>(size);
+		memoryBuffer = new memoryBuffer[sizeof(T) * count];
+		pInt = new (memoryBuffer) T();
 	}
 
-	template <typename T>
-	void AddToBuffer(T addedData)
-	{
-		
-		std::memcpy(&memoryBuffer, addedData, sizeof(addedData));
-		std::cout << memoryBuffer[0] << std::endl;
-	}
-
+	
 
 private:
+	void* AddToBuffer(T addedData)
+	{
+		int* pos = new (memoryBuffer + sizeof(T)) T();
+		return pos;
+	}
 
-	VenisBuffer() {}
-	~VenisBuffer() { std::cout << "destroying VenisBuffer" << std::endl; }
 
-	static VenisBuffer* Instance;
-	std::unique_ptr<unsigned char[]> memoryBuffer;
+	static std::unique_ptr <VenisBuffer> Instance;
+	unsigned char* memoryBuffer;
+	int* pInt;
 };
 
-VenisBuffer* VenisBuffer::Instance = NULL;
 
 template <typename T>
 class VenisPointer
 {
 public:
-	VenisPointer() {VenisBuffer::GetInstance()->AddToBuffer(this); }
+	VenisPointer() {}
 	~VenisPointer() { std::cout << "destructor" << std::endl; }
 
-	 void* operator new (size_t size) { std::cout << "Type Not Allowed Asserting" << std::endl;
-	 assert(false);
-		return 0; }
+	void* operator new (size_t size) { return VenisBuffer::AddToBuffer(this); }
 	 void operator delete (void * p) { std::cout << "Deleting Mems" << std::endl; }
 
-	//std::unique_ptr<T> thisVal;
+
+	 friend VenisBuffer<T>;
 
 private:
 
