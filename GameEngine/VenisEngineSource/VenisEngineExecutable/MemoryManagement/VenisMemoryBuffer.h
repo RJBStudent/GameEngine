@@ -4,15 +4,18 @@
 #include <memory>
 #include <typeinfo>
 #include <assert.h>
+#include <map>
 //Class Started by RJ Bourdelais
 
-
+template <typename T>
 class VenisBufferManager
 {
 public:
 private:
 
-	
+	//template <typename T>
+
+	std::map<T, VenisBuffer<T>> bufferList;
 
 };
 
@@ -54,7 +57,7 @@ public:
 	VenisPointer() {}
 	~VenisPointer() { std::cout << "destructor" << std::endl; }
 
-	void* operator new (size_t size) { return VenisBuffer::AddToBuffer(this); }
+	void* operator new (size_t size) { return VenisBuffer::AddToBuffer(*this); }
 	 void operator delete (void * p) { std::cout << "Deleting Mems" << std::endl; }
 
 
