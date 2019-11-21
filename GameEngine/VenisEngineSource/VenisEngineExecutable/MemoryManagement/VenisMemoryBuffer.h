@@ -7,20 +7,35 @@
 #include <map>
 //Class Started by RJ Bourdelais
 
-template <typename T>
+//template <typename T>
 class VenisBufferManager
 {
 public:
+	VenisBufferManager* GetInstance() { if (!Instance) { Instance = new VenisBufferManager(); } return Instance; }
+
+	void DestroyInstance() { if (Instance) { delete Instance; } }
+
+	VenisBufferParent* CreateBuffer(int size, int count) {} // Call new Buffer in VenisBuffer
+	void* AddToBuffer(VenisBufferParent vbp) {}; //Get size of vbp to get proper buffer, add to that buffer, return pointer
+
 private:
+	VenisBufferManager* Instance = NULL;
 
-	//template <typename T>
+	VenisBufferManager() {}
+	~VenisBufferManager() {}
 
-	std::map<T, VenisBuffer<T>> bufferList;
+	std::map<int, VenisBufferParent> bufferList;
 
 };
 
+class VenisBufferParent
+{
+public:
+	VenisBufferParent() {}
+};
+
 template <typename T>
-class VenisBuffer
+class VenisBuffer : public VenisBufferParent
 {
 public:
 	
@@ -57,7 +72,7 @@ public:
 	VenisPointer() {}
 	~VenisPointer() { std::cout << "destructor" << std::endl; }
 
-	void* operator new (size_t size) { return VenisBuffer::AddToBuffer(*this); }
+	void* operator new (size_t size) { return VenisBufferManager::GetInstance()->(*this); }
 	 void operator delete (void * p) { std::cout << "Deleting Mems" << std::endl; }
 
 
