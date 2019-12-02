@@ -14,8 +14,14 @@ public:
 	VenisBufferManager* GetInstance() { if (!Instance) { Instance = new VenisBufferManager(); } return Instance; }
 
 	void DestroyInstance() { if (Instance) { delete Instance; } }
-
-	VenisBufferParent* CreateBuffer(int size, int count) {} // Call new Buffer in VenisBuffer
+	
+	VenisBufferParent* CreateBuffer(typename T, int count) 
+	{
+		VenisBuffer<T> nVB = new VenisBuffer<T>();
+		nVB.NewBuffer(T, count);
+		bufferList.insert(sizeof(T), nVB);
+		return nVB;
+	} // Call new Buffer in VenisBuffer
 	void* AddToBuffer(VenisBufferParent vbp) {}; //Get size of vbp to get proper buffer, add to that buffer, return pointer
 
 private:
